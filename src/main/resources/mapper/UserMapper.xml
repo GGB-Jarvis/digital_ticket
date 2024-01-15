@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.num.digital_ticket.mapper.UserMapper">
+
+<!--    &lt;!&ndash;根据用户 Id 查询角色信息&ndash;&gt;-->
+<!--    <select id="selectRoleByUserId" resultType="com.num.digital_ticket.entity.Role">-->
+<!--        SELECT r.id,r.name FROM role r-->
+<!--                                    INNER JOIN role_user ru ON ru.rid=r.id-->
+<!--        where ru.uid=#{0}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;根据用户 Id 查询权限信息&ndash;&gt;-->
+<!--    <select id="selectPermissionByUserId" resultType="com.num.digital_ticket.entity.Permission">-->
+<!--        SELECT m.id,m.name,m.url,m.parentid,m.permission-->
+<!--        FROM menu m-->
+<!--                 INNER JOIN role_menu rm ON m.id=rm.mid-->
+<!--                 INNER JOIN role r ON r.id=rm.rid-->
+<!--                 INNER JOIN role_user ru ON r.id=ru.rid-->
+<!--        WHERE ru.uid=#{0}-->
+<!--    </select>-->
+</mapper>

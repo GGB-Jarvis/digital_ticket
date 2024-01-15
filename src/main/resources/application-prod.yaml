@@ -1,0 +1,32 @@
+server:
+  servlet:
+    context-path: /digital_ticket
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/digital_tickets?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: Mysql_250
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/**/*.xml
+
+
+jwt:
+  header: token
+  # 令牌前缀
+  token-start-with: Bearer
+  # 使用Base64对该令牌进行编码
+  base64-secret: gR6cytlUlgMfVh08nLFZf8hMk4abcDX5rWBVlsCbKvRlWcLwNRU6+rIPcLx21x191kJgP8udtoZuHt5yUDWtgg==
+  # 令牌过期时间 此处单位秒
+  access-token-expiration: 5
+  refresh-token-expiration: 1296000
+#=================================================================
+# log
+#=================================================================
+#logging:
+#  config: classpath:logback-jwt.xml
